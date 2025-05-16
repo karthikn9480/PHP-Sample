@@ -39,6 +39,7 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 COPY docker/default.conf /etc/nginx/conf.d/default.conf
 
+RUN rm /etc/nginx/sites-enabled/default
 # Expose HTTP
 EXPOSE 80
 
